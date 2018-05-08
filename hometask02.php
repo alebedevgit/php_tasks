@@ -18,3 +18,27 @@ for($i=1; $i<=$height; $i++) {
     echo "<br>";
 }
 
+
+
+echo "<p><strong>2. Создать массив из дней недели. С помощью цикла foreach выведите все дни недели, а текущий день выведите жирным. 
+	Текущий день можно получить с помощью функции date.
+	Название дней выводить по-русски</strong></p>";
+
+$days = [
+    'Monday'=>"Понедельник",
+    'Tuesday'=>"Вторник",
+    'Wednesday'=>"Среда",
+    'Thursday'=>"Четверг",
+    'Friday'=>"Пятница",
+    'Saturday'=>"Суббота",
+    'Sunday'=>"Воскресенье",
+];
+$currentDay = date('l');    
+
+foreach ($days as $key => $value) {
+    if ($key == $currentDay) {
+        echo "<p><strong>$value</strong><p>";
+    } else {
+    echo "<p>$value</p>";
+    }
+}
